@@ -1,0 +1,17 @@
+body {
+    background-image: url('../img/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.redes {
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+    background-color: violet;
+}
+ .barra-nav {
+        background-color: #28a745 !important; 
+    }
