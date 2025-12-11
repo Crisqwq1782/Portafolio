@@ -1,17 +1,259 @@
+/* --- Variables Globales y Tema --- */
+:root {
+    --primary-color: #00f2ff; /* Cian más brillante */
+    --secondary-color: #0051ff; /* Azul eléctrico */
+    --bg-dark: #0a0a12; /* Fondo casi negro */
+    --bg-card: #131324; /* Fondo de tarjetas ligeramente más claro */
+    --text-light: #ffffff;
+    --text-muted: #aab2cd; /* Texto secundario azulado */
+    --gradient-main: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --shadow-glow: 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+/* --- Estilos Base y Tipografía --- */
 body {
-    background-image: url('../img/Background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
+    font-family: 'Poppins', sans-serif;
+    /* Fondo animado sutil */
+    background: linear-gradient(-45deg, #0a0a12, #11112b, #0d0d21, #0a0a12);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
-.redes {
-    font-size: 2rem;
-    margin: 0 15px;
-    transition: color 0.3s;
-    background-color: violet;
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
- .barra-nav {
-        background-color: #28a745 !important; 
-    }
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: -0.5px;
+}
+
+.text-secondary-light {
+    color: var(--text-muted) !important;
+}
+
+/* --- Utilidades de Marca --- */
+.brand-gradient {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* --- Navbar Glassmorphism --- */
+.glass-navbar {
+    background: rgba(10, 10, 18, 0.85) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--text-muted) !important;
+    transition: color 0.3s ease;
+    position: relative;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Pequeño punto debajo del link activo */
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.nav-contact-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color) !important;
+}
+.nav-contact-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark) !important;
+    box-shadow: var(--shadow-glow);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 120px; /* Espacio para el navbar fijo */
+    padding-bottom: 80px;
+    position: relative;
+}
+
+/* Contenedor de la imagen del Hero con brillo */
+.hero-image-container {
+    position: relative;
+    padding: 10px;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, rgba(0, 242, 255, 0.2), rgba(0, 81, 255, 0.2));
+    box-shadow: var(--shadow-glow);
+}
+
+.hero-img {
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.hero-image-container:hover .hero-img {
+    transform: scale(1.02);
+}
+
+/* --- Botones Personalizados --- */
+.btn-primary-glow {
+    background: var(--gradient-main);
+    border: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 81, 255, 0.3);
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.5);
+    color: white;
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--bg-dark);
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Tarjetas de Habilidades (Tech Cards) --- */
+.section-spacer {
+    padding-top: 80px;
+}
+
+.tech-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Efecto de brillo al pasar el mouse sobre la tarjeta */
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 25px;
+    padding: 2px; /* Grosor del borde gradiente */
+    background: var(--gradient-main);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-glow);
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.tech-card-featured {
+    background: linear-gradient(180deg, var(--bg-card), rgba(0, 81, 255, 0.05));
+    border-color: rgba(0, 242, 255, 0.2);
+}
+
+.icon-box {
+    font-size: 3.5rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* --- Sección Visión --- */
+.vision-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Fondo con un destello sutil */
+    background-image: radial-gradient(circle at top right, rgba(0, 81, 255, 0.1), transparent 40%);
+}
+
+/* --- Footer --- */
+.footer {
+    background: #050508;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-light);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: var(--gradient-main);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* --- Animaciones Simples de Entrada --- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0; /* Inicia invisible */
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}

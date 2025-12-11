@@ -1,57 +1,177 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portafolio CF</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Portafolio CF | Full Stack Developer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Cristobal Fuenzalida</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Sobre mí</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Experiencia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projectos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-navbar">
+      <div class="container">
+        <a class="navbar-brand brand-gradient" href="#">Cristobal Fuenzalida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link " href="#">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Habilidades">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Proyectos">Proyectos</a></li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a class="btn btn-sm btn-outline-light rounded-pill px-3 nav-contact-btn" href="./Contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<div class="container text-white mt-5">
-<h1><i class="fa-solid fa-user"></i>Desarrollador Full Stack</h1>
-<p>Soy un desarrollador Full Stack apasionado por transformar ideas conceptuales en soluciones web robustas y escalables.
-Mi experiencia abarca el ciclo completo de desarrollo de software, desde la planificación de la arquitectura de la base de datos (Back-end) hasta la creación de interfaces de usuario intuitivas y responsivas (Front-end).</p>
-<p>Me considero una persona muy estudiosa que le encanta estar al dia con las ultimas novedades en la industria TI y además una de las cosas que mas disfruto es poner en practica mis conocimientos y garantizar al cliente la maxima satisfacción.</p>
-<br>
-<h2><i class="fa-solid fa-suitcase"></i>Mi Enfoque</h2>
-<br>
-Me especializo en construir aplicaciones que no solo son visualmente atractivas, sino que también son eficientes, seguras y fáciles de mantener.
-<ul>
-    <li>Front-end: Experiencia en la creación de experiencias de usuario dinámicas con Bootstrap.</li>
-    <li>Back-end: Fuerte dominio en el desarrollo de APIs y lógica del servidor utilizando [Menciona tu tecnología Back-end, ej: Node.js con Express, Python con Django, o PHP con Laravel].</li>
-    <li>Base de Datos: Gestión y optimización de datos en sistemas [Menciona si usas PostgreSQL, MongoDB, MySQL, etc.].</li>
-</ul>
-<p>En un futuro me gustaria especializarme en el area de QA y DevOps ya que considero que son habilidades bastante importantes para alcanzar un mejor nivel como programador, creo que la industria tecnologica está en auge y quiero formar parte de este cambio que hará del mundo un lugar mucho mejor.</p>
-  <p>Siempre busco aplicar las mejores prácticas de código y me comprometo a entregar productos que superen las expectativas, resolviendo problemas complejos con soluciones elegantes.</p> 
-</div>
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-7 order-2 order-lg-1 animate-fade-up">
+                    <h1 class="display-4 fw-bold mb-4"><span class="brand-gradient">Cristobal Fuenzalida.</span> Desarrollador Full Stack.</h1>
+                    <p class="lead text-secondary-light mb-5">
+                        Transformo ideas complejas en soluciones web robustas, escalables y visualmente impactantes. Especializado en el ciclo completo de desarrollo, desde la base de datos hasta la interfaz de usuario.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="./Contacto.html" class="btn btn-primary-glow btn-lg rounded-pill px-5">
+                            <i class="fa-solid fa-paper-plane me-2"></i>Contáctame
+                        </a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2 text-center animate-fade-in">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Coding setup" class="img-fluid rounded-4 shadow-lg hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mb-5 section-spacer">
+        <div class="row mb-5 justify-content-center text-center animate-fade-up">
+            <div class="col-lg-8">
+                <h2 id="Habilidades" class="fw-bold mb-3"><i class="fa-solid fa-layer-group me-2 brand-gradient"></i>Mis Habilidades</h2>
+                <p class="text-secondary-light fs-5">Creo firmemente en escribir código limpio, eficiente y mantenible, priorizando la experiencia del usuario y la seguridad.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4 animate-fade-up" style="animation-delay: 0.1s;">
+                <div class="tech-card h-100 p-4 p-lg-5 text-center">
+                    <div class="icon-box mb-4">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h4>HTML</h4>
+                    <p class="text-secondary-light mb-0"> Uso de HTML para estructurar y organizar el contenido, creando una base sólida que facilita la navegación y mejora la accesibilidad (SEO).</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="tech-card h-100 p-4 p-lg-5 text-center tech-card-featured">
+                    <div class="icon-box mb-4">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h4>CSS</h4>
+                    <p class="text-secondary-light mb-0">Experiencia en el uso de Bootstrap para desarrollar sitios web responsivos y adaptativos, aprovechando su sistema de grid para acelerar el desarrollo.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 animate-fade-up" style="animation-delay: 0.3s;">
+                <div class="tech-card h-100 p-4 p-lg-5 text-center">
+                    <div class="icon-box mb-4">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <h4>Bootstrap</h4>
+                    <p class="text-secondary-light mb-0">Experiencia en el uso de Bootstrap para desarrollar sitios web responsivos y adaptativos, aprovechando su sistema de rejilla para acelerar el desarrollo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mb-5 animate-fade-up">
+        <div class="vision-box p-4 p-md-5 rounded-4 position-relative overflow-hidden">
+             <div class="row align-items-center position-relative z-1">
+                 <div class="col-md-8">
+                    <h3 class="fw-bold mb-4"><i class="fa-solid fa-flag me-2 brand-gradient"></i>Metas y Futuro</h3>
+                    <p class="fs-5 text-secondary-light">Mi objetivo es evolucionar hacia roles de DevOps y QA, integrando la automatización y la calidad en cada etapa del desarrollo. Aspiro a construir tecnología que no solo funcione, sino que sea tanto agradable a la vista como funcional.</p>
+                 </div>
+                 <div class="col-md-4 text-center d-none d-md-block">
+                     <i class="fa-solid fa-list" style="font-size: 6rem; opacity: 0.2; color: var(--primary-color);"></i>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+ <section id="Proyectos" class="container py-5 section-spacer">
+    <div class="row mb-5 justify-content-center text-center animate-fade-up">
+        <div class="col-lg-8">
+            <h2 class="fw-bold mb-3"><i class="fa-solid fa-rocket brand-gradient me-3"></i>Proyectos</h2>
+            <p class="text-secondary-light fs-5">Proyectos destacados en los que trabajé o aporté.</p>
+        </div>
+    </div>
+    
+    <div class="row g-4 justify-content-center"> 
+
+        <div class="col-lg-4 col-md-6 col-12 animate-fade-up">
+            <div class="card h-100 project-card">
+                <img src="./assets/img/card-1.png" class="card-img-top" alt="Página Tipo Cupón">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Pagina Tipo Cupón.</h5>
+                    <p class="card-text text-secondary-light">Página web tipo cupón, donde se muestran diferentes ofertas y descuentos de productos y servicios.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 animate-fade-up" style="animation-delay: 0.2s;">
+            <div class="card h-100 project-card">
+                <img src="./assets/img/card-2.png" class="card-img-top" alt="Landpage Restaurante">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Landpage Restaurante.</h5>
+                    <p class="card-text text-secondary-light">Web informativa para un restaurante, mostrando su menú, ubicación y contacto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 animate-fade-up" style="animation-delay: 0.4s;">
+            <div class="card h-100 project-card">
+                <img src="./assets/img/card-3.png" class="card-img-top" alt="Página Portafolio">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Página Portafolio</h5>
+                    <p class="card-text text-secondary-light">Diseño para portafolio con formulario de contacto y redes sociales para establecer comunicación con futuros clientes.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <footer class="footer py-5 text-center">
+        <div class="container">
+            <h4 class="brand-gradient fw-bold mb-3">Cristobal Fuenzalida</h4>
+            <p class="text-secondary-light mb-4">Sigueme en mis redes sociales!</p>
+            
+            <div class="social-links mb-4 d-flex justify-content-center gap-3">
+                <a href="#" class="social-btn" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:tuemail@ejemplo.com" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+            <hr class="border-secondary opacity-25 mx-auto" style="max-width: 300px;">
+            <small class="text-secondary-light opacity-75">&copy; 2024 Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
